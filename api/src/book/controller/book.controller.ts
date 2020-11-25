@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { Book } from '../models/book.interface';
 import { BookService } from '../service/book.service';
 
-@Controller('book')
+@Controller('books')
 export class BookController {
 
     constructor(private bookService: BookService) { }
