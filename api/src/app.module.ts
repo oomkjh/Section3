@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { url } from 'inspector';
+import { BookModule } from './book/book.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { url } from 'inspector';
       url: process.env.DATABASE_URL,
       autoLoadEntities:true,
       synchronize:true
-    })
+    }),
+    BookModule
   ],
   controllers: [AppController],
   providers: [AppService],
